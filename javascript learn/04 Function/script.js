@@ -83,7 +83,7 @@ function div(a,b){
 }
 
 add(80,75)
-sub(15,05)
+sub(15,5)
 mul(30,12)
 div(144,12)
 
