@@ -1,18 +1,18 @@
 //Create a function named greet that prints "Hello World".
 
-function  greet(){
+function greet1(){
     console.log("Hello World");
 }
 
-greet();
+greet1();
 
 //Create a function add(a, b) that returns the sum.
 
-function add(a,b){
+function add1(a,b){
     console.log(a+b);
 }
 
-add(65,90);
+add1(65,90);
 
 //Write a function to calculate the square of a number.
 
