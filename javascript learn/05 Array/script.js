@@ -132,3 +132,101 @@ console.log(arr3);
 //         console.log(`${i} is odd`);
 //     }
 //  }
+
+//  Intermediate Question
+
+// You are given an array of prices.
+
+// Print each price with `"₹"` before it.
+
+// ```jsx
+// let prices = [100, 250, 399, 499];
+// ```
+
+// ### Hint
+
+// - `forEach()` runs once for every element.
+// - You don't return anything here.
+// - Use `console.log()` inside it.
+
+let prices = [100, 250, 399, 499];
+prices.forEach(function(prices){
+   console.log("₹"+ prices);
+});
+
+
+// // You are given an array of students.
+
+// ```jsx
+// let students = [
+//   { name: "Anubhav", marks: 85 },
+//   { name: "Rahul", marks: 42 },
+//   { name: "Aman", marks: 90 },
+// ];
+// ```
+
+// Print:
+
+// - `"Pass"` if marks are greater than 50
+// - `"Fail"` otherwise
+
+let students = [
+  { name: "Anubhav", marks: 85 },
+  { name: "Rahul", marks: 42 },
+  { name: "Aman", marks: 90 },
+];
+
+students.forEach(function(students){
+   if(students.marks > 50){
+      console.log(students.name, "PASS");
+   }
+   else{
+      console.log(students.name,  "FAIL");
+   }
+});
+
+
+// // Convert all names into uppercase.
+
+// ```jsx
+// let names = ["anubhav", "rahul", "aman"];
+// ```
+
+let names = ["anubhav", "rahul", "aman"];
+let names2 = names.map(function(names){
+   return names.toUpperCase()
+});
+
+console.log(names2);
+
+//Filter all even numbers.
+
+// ```jsx
+// let nums = [1,2,3,4,5,6,7,8];
+// ```
+
+// Expected Output:
+
+// ```jsx
+// [2,4,6,8]
+// ```
+
+// ### Hint
+
+// - `filter()` keeps elements when condition is `true`.
+
+let numb1 = [1,2,3,4,5,6,7,8];
+let numb2 = numb1.filter(function(numb1){
+   return numb1 % 2 === 0;
+});
+
+console.log(numb2);
+
+//Find total sum of array.
+
+let numbe = [10,20,30,40];
+let numbe2 = numbe.reduce(function(sum,numbe){
+   return sum + numbe;
+},0);
+
+console.log(numbe2);
