@@ -1,0 +1,119 @@
+:root{
+    --king: red;
+    --queen: rgb(249, 103, 127);
+     
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    background-color: crimson;
+    font-size: 15px
+}
+
+h1::after{
+    content: " I am Manish Kumar Mandal";
+    font-size: 20px;
+    color: violet;
+    font-family: 'helvetica neue';
+}
+
+h1::before{
+    content: " I am a Web Developer ";
+    font-size: 20px;
+    color: violet;
+    font-family: 'helvetica neue';
+} 
+
+#navbar{
+    witdh: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 20px;
+}
+
+h4{
+    color: white;
+    font-size: 20px;
+    position: relative;
+    
+}
+
+h4::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: red;
+    position: absolute;
+    bottom: -0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all ease 0.3s;
+}
+
+h4:hover::after{
+    width: 100%;
+
+}
+
+button{
+    padding: 15px;
+    font-size: 20px;
+    margin: 50px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 191,255);
+    color: rgb(0, 191,255);
+    border-radius: 5px;
+    font-weight: 600;
+    position: relative;
+}
+
+button::after{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: royalblue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    transition: all ease 0.3s;
+}
+
+button:hover::after{
+    width: 100%;
+}
+
+button:hover{
+    color: white;
+}
+
+footer>button{
+    background-color: black;
+}
+
+footer>p span{
+    color: var(--king);
+} 
+
+h2 span{
+    color: var(--queen);
+} 
+
