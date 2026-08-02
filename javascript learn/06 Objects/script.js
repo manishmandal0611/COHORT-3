@@ -528,15 +528,107 @@ console.log(student1.getResult());
 
 
 
+// let person2 = {
+//     firstName: "Rahul",
+//     lastName: "Sharma"
+// };
+
+// let { firstName , lastName } = person2
+
+// console.log(firstName,lastName);
 
 
 
 
-let person2 = {
-    firstName: "Rahul",
-    lastName: "Sharma"
-};
 
-let { firstName , lastName } = person2
 
-console.log(firstName,lastName);
+
+
+
+var obj = {
+  firstName: 'Manish',
+  lastName: 'Mandal',
+  age: 33,
+  getIntro:function(){
+    console.log(this.firstName+" "+this.lastName);
+  }
+}
+
+obj.getIntro()
+
+
+
+
+
+
+
+ // function sharing ke liye yeh 3 methods use hota hai
+ 
+ // Call
+ // apply
+ // bind
+
+
+
+
+ //  var student5 = {
+//   firstName:'Rahul',
+//   lastName:'Singh',
+//   getIntro:function(){
+//     console.log(this.firstName+" "+this.lastName);
+//   }
+//  }
+
+
+//  var student6 = {
+//   firstName:'Soham',
+//   lastName:'Rajput'
+//  }
+
+//  student5.getIntro()
+
+
+
+
+
+
+
+/* get intro ka function eske ander bana hua hai student 5 ke ander. lekin main chahata hu ki student 6 ko call karu main
+ toh main call karte time par getintro.call ke ander student 6 ko call kar dunga toh automatic jo student 5 ke ander ka jo function hai
+ woh function var student 6 ke ander aa jaye ga*/
+
+ var student5 = {
+  firstName:'Rahul',
+  lastName:'Singh',
+  getIntro:function(){
+    console.log(this.firstName+" "+this.lastName);
+  }
+ }
+
+
+ var student6 = {
+  firstName:'Soham',
+  lastName:'Rajput'
+ }
+
+ student5.getIntro.call(student6)
+
+
+
+
+
+
+ var student7 = {
+  firstName:'Santosh',
+  lastName:'Sharma',
+  getIntro:function(city,state){
+    console.log(`${this.firstName} ${this.lastName}, ${city} (${state})`);
+  }
+ }
+
+ var student8 = {
+  firstName:'Mohit',
+  lastName:'Yadav'
+ }
+
+ student7.getIntro.call(student8, 'patna','Bihar')

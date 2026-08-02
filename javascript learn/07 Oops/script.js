@@ -9,7 +9,7 @@ let hero = {
     }
 }
 
-hero.getIntro();
+hero.getIntro();  
 
 
 
@@ -117,6 +117,89 @@ s5.showProfile();
 s6.showProfile();
 s7.showProfile();   
  
- 
 
 
+
+
+
+
+
+
+// solve question practice
+
+const user = {
+  name: "Anubhav",
+
+  greet() {
+    console.log("hello", this.name);
+  }
+};
+
+user.greet();
+
+
+
+
+
+// make a regular function
+const user1 = {
+    name: "Rahul",
+
+    regular(){
+        console.log(this.name);
+    }
+}
+
+user1.regular();
+
+
+
+
+
+// Arrow method
+
+const user3 = {
+    name: "Kunal",
+
+    arrow: () => {
+        console.log(this.name);
+    }
+};
+ user3.arrow();
+
+
+
+
+
+
+
+
+ const user4 = {
+    name: "Mohan Lal",
+    hobbies: ['coading', 'Gaming', 'Reading'],
+
+    showHobbies() {
+        this.hobbies.forEach(function(hobby){
+            console.log(this.name + " likes " + hobby);
+        })
+    }
+ };
+
+ user4.showHobbies();
+
+
+
+
+// Arror function
+ const user5 = {
+  name: "Rahul",
+  hobbies: ["Coding", "Gaming", "Reading"],
+
+  showHobbies() {
+    this.hobbies.forEach((hobby) => {
+      console.log(this.name + " likes " + hobby);
+    });
+  }
+};
+
+user5.showHobbies();
