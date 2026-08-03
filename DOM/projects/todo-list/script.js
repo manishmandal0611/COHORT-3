@@ -17,4 +17,22 @@ btn.addEventListener("click", () => {
             </div>`
 
   inp.value = "";
+
+  const deleteBtns = document.querySelectorAll(".delete");
+  deleteBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.parentElement.parentElement.remove();
+    });
+  });
+
+  const editBtns = document.querySelectorAll(".edit");
+  editBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const h3 = btn.parentElement.previousElementSibling;
+      const newValue = prompt("Edit your todo:", h3.textContent);
+      if (newValue !== null && newValue.trim() !== "") {
+        h3.textContent = newValue;
+      }
+    });
+  });
 });
